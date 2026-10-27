@@ -1,0 +1,232 @@
+/* ===== Theme Variables ===== */
+:root {
+    --primary: #0047ab;      /* blue: nav, headers, buttons */
+    --primary-dark: #002f75; /* hover state */
+    --bg: #f5f5f5;           /* light grey page background */
+    --text: #1f2933;         /* dark text */
+}
+
+/* ===== Base Styles ===== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* keeps headings clear of the sticky nav */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ===== Navigation Styles ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    padding: 2px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.7rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--primary-dark);
+    border-radius: 4px;
+}
+
+/* ===== Section Spacing (Box Model) ===== */
+section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* ===== Visual Separators ===== */
+hr {
+    border: none;
+    border-top: 2px solid #c9ced6;
+    margin: 0;
+}
+
+/* ===== About Section ===== */
+.profile-img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#about {
+    padding-top: 10px;
+}
+
+#about p {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* ===== Skills Table ===== */
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid var(--primary);
+    font-size: 0.8rem;
+}
+
+th,
+td {
+    border: 1px solid var(--primary);
+    padding: 10px 14px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f6fc; /* alternating row colour (subtle) */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* ===== Project Cards ===== */
+.project-card {
+    max-width: 420px;
+    margin: 0 auto 16px;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #dde2ea;
+    border-radius: 6px;
+}
+
+.project-card h3,
+.project-card p {
+    margin: 4px 0;
+}
+
+/* ===== Contact Form ===== */
+.form-table {
+    max-width: 420px;
+}
+
+.form-table td {
+    background-color: transparent;
+    font-size: 0.75rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.form-table td:first-child {
+    width: 30%;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 6px 8px;
+    font-family: inherit;
+    border: 1px solid #9aa5b5;
+    border-radius: 3px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+}
+
+/* ===== Buttons ===== */
+button,
+.back-to-top {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover,
+.back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ===== Back to Top (Fixed Positioning) ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    z-index: 20;
+}
+
+/* ===== Footer ===== */
+/* ===== Footer ===== */
+footer {
+    padding: 14px 20px;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
